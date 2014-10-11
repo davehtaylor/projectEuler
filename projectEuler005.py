@@ -7,6 +7,7 @@
 i = 2520                            # Start the evaluation at 2520, since the answer can't be any smaller than this.
 
 while ((i%11 == 0) and \
+        (i%12 == 0) and \
         (i%13 == 0) and \
         (i%14 == 0) and \
         (i%15 == 0) and \
@@ -20,7 +21,7 @@ while ((i%11 == 0) and \
 # Every number is divisible by 1. If the number is divisible by 20, it's also divisible by 2, 4, 5, and 10. 
 # If it's divisible by 15, it's divisible by 3 and 5. If it's divisible by 12, it's also divisible by 2, 3, 4, and 6. 
 # if it's divisible by 14, it's also divisible by 2 and 7. If it's divisible by 16, it's also divisible by 2, 4, and 8.
-# If it's divisible by 18, it's also divisible by 2 and 9. So, 1-10 and 12 don't need to be evaluated in the loop.
+# If it's divisible by 18, it's also divisible by 2 and 9. So, 1-10 don't need to be evaluated in the loop.
 
 print i                             # Print out the number
 
