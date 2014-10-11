@@ -81,3 +81,21 @@ This repo contains solutions to projecteuler.com problems, impelemented in Pytho
 > 
 > Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
+## Problem 9
+
+>Special Pythagorean triplet
+>
+>A Pythagorean triplet is a set of three natural numbers, a < b < c, for which a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+>
+>For example, 3<sup>2</sup> + 4<sup>2</sup> = 9 + 16 = 25 = 5<sup>2</sup>.
+> 
+>There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+>Find the product abc.
+
+## Problem 10
+
+>Summation of primes
+>
+>The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+>
+>Find the sum of all the primes below two million.
