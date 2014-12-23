@@ -6,11 +6,9 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 
-# Initialize a variable, i, for all numbers below 1000, then 
-# initialize a list, threeAndFive,  to hold the numbers that
+# Initialize a list, threeAndFive,  to hold the numbers that
 # are multiples of 3 and 5.
 
-i = 1
 threeAndFive = []
 
 # Test if each number from 1 - 1000 is a multiple of 3 or 5, and 
