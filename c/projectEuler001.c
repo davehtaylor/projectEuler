@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int multiplesOfThree();
+int multiplesOfThree(int);
 
 int main(void) 
 {
@@ -15,7 +15,7 @@ int main(void)
 /* This is the function that performs this calculation. Find the sum
  * of all numbers less than 1000 which are multiples of 3 or 5 */
 
-int multiplesOfThree(inputNum)
+int multiplesOfThree(int inputNum)
 {
     
     /* Define an iterator variable for the loop and a variable to 
