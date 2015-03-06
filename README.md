@@ -1,6 +1,6 @@
 # Project Euler
 
-This repo contains solutions to projecteuler.net problems, impelemented in Python. 
+This repo contains solutions to projecteuler.net problems, impelemented in Python and C. 
 
 ## Problem 1
 
