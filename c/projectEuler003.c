@@ -9,24 +9,26 @@ bool isPrime(int);
 
 int main(void)
 {
-    int startingNum = 600851475143;
-
+/*    int startingNum = 600851475143; */
+    int startingNum = 100;
+    int answer = factor(startingNum);
+    printf("%d\n", answer);
 }
 
 /* Find the lowest whole number the input number is divisible by */
 int lowest(int inputNum)
 {
-    int n = 2;
+    int divisor = 2;
 
-    while (inputNum % n != 0)
+    while (inputNum % divisor != 0)
     {
-        n = n + 1
+        divisor = divisor + 1;
     }
 
-    return n
+    return divisor;
 }
 
-/* Determine if the number is prime */
+/* Determine if the input number is prime */
 bool isPrime(int inputNum)
 {
     if (inputNum == lowest(inputNum))
@@ -36,4 +38,23 @@ bool isPrime(int inputNum)
     else {
         return false;
     }
+}
+
+/* Perform the factorization */
+int factor(int inputNum)
+{
+    int topLevel;
+    int branch1;
+    int branch2;
+
+    while (isPrime(branch2) == false)
+    {
+        topLevel = inputNum;
+        branch1 = lowest(topLevel);
+        branch2 = topLevel / branch1;
+
+        topLevel = branch2;
+    }
+
+    return branch2;
 }
