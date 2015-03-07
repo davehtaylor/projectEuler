@@ -3,20 +3,19 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-int lowest(int);
-bool isPrime(int);
-int factor(int);
+long lowest(long);
+bool isPrime(long);
+long factor(long);
 
 int main(void)
 {
-/*    int startingNum = 600851475143; */
-    int startingNum = 100;
+    long startingNum = 600851475143;
     int answer = factor(startingNum);
     printf("%d\n", answer);
 }
 
 /* Find the lowest whole number the input number is divisible by */
-int lowest(int inputNum)
+long lowest(long inputNum)
 {
     int divisor = 2;
 
@@ -29,7 +28,7 @@ int lowest(int inputNum)
 }
 
 /* Determine if the input number is prime */
-bool isPrime(int inputNum)
+bool isPrime(long inputNum)
 {
     if (inputNum == lowest(inputNum))
     {
@@ -41,20 +40,28 @@ bool isPrime(int inputNum)
 }
 
 /* Perform the factorization */
-int factor(int inputNum)
+long factor(long inputNum)
 {
-    int topLevel;
-    int branch1;
-    int branch2;
+    long topLevel = inputNum;
+    long branch1;
+    long branch2;
 
-    while (isPrime(branch2) == false)
+    /* If the input number is prime, don't bother factoring.
+     * Otherwise, continue with the factorization process. */ 
+    if (isPrime(inputNum) == true)
     {
-        topLevel = inputNum;
-        branch1 = lowest(topLevel);
-        branch2 = topLevel / branch1;
-
-        topLevel = branch2;
+        return inputNum;
     }
+    else {
 
-    return branch2;
+        while (isPrime(branch2) == false)
+        {
+            branch1 = lowest(topLevel);
+            branch2 = topLevel / branch1;
+
+            topLevel = branch2;
+        }
+
+        return branch2;
+    }
 }
