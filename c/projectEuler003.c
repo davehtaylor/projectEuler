@@ -5,7 +5,7 @@
 
 int lowest(int);
 bool isPrime(int);
-
+int factor(int);
 
 int main(void)
 {
