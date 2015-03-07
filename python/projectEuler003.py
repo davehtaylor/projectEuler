@@ -44,7 +44,7 @@ def factorTree(startingNum):
     # current position in the tree.
 
     while isPrime(branch2) == False:
-        branche1, branch2 = branches(branch2)
+        branch1, branch2 = branches(branch2)
         primeFactors.append(branch1)
         branches(branch2)
 
