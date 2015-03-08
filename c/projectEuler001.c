@@ -11,7 +11,9 @@ int main(void)
     int answer = multiplesOfThree(maxNum);
 
     printf("%d\n",answer);    
-    
+
+    return 0;
+
 }
 
 int multiplesOfThree(int inputNum)

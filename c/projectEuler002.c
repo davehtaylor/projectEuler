@@ -6,8 +6,13 @@ int evenFib(void);
 
 int main(void)
 {
+
     int answer = evenFib();
+
     printf("%d\n",answer);
+
+    return 0;
+
 }
 
 /* The evenFib function generates the Fibonacci sequence. Start with three 

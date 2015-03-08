@@ -9,9 +9,13 @@ long factor(long);
 
 int main(void)
 {
+
     long startingNum = 600851475143;
     int answer = factor(startingNum);
+
     printf("%d\n", answer);
+    
+    return 0;
 }
 
 /* Find the lowest whole number the input number is divisible by */
