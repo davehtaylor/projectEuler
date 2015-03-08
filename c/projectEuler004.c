@@ -10,6 +10,7 @@ int main(void)
     return 0;
 }
 
+/* A function to reverse a number */
 int reverseNum(int inputNum)
 {
     int reverse = 0;
