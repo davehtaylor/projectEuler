@@ -42,7 +42,9 @@ int palindrome(void)
             product = num1 * num2;
 
             /* Check if the product is a palindrome and also if it is 
-             * larger than the last palindrome in the loop. */
+             * larger than the last palindrome in the loop. Otherwise,
+             * we would just find the last palindrome, but not necessarily
+             * the biggest. */
             if (product == reverseNum(product) && product > palindrome)
             {
                 palindrome = product;
