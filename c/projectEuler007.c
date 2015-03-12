@@ -39,7 +39,7 @@ bool isPrime(int inputNum)
  * found and the primeCount variable is iterated by 1. Once the primeCount
  * variable reaches the specified number, the prime from that iteration is 
  * returned. */
-int calculatePrimes( int max)
+int calculatePrimes(int max)
 {
     int i = 0;
     int prime;
