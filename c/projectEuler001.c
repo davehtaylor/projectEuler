@@ -2,15 +2,13 @@
 
 #include <stdio.h>
 
+#define MAXNUM 1000
+
 int multiplesOfThree(int);
 
 int main(void) 
 {
-    
-    int maxNum = 1000;
-    int answer = multiplesOfThree(maxNum);
-
-    printf("%d\n",answer);    
+    printf("%d\n", multiplesOfThree(MAXNUM));    
 
     return 0;
 
