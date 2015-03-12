@@ -5,12 +5,11 @@
 
 int lowest(int);
 bool isPrime(int);
-int calculatePrimes(void);
+int calculatePrimes(int);
 
 int main(void)
 {
-    int answer = calculatePrimes(); 
-    printf("%d\n", answer);
+    printf("%d\n", calculatePrimes(10001));
     return 0;
 }
 
@@ -40,13 +39,13 @@ bool isPrime(int inputNum)
  * found and the primeCount variable is iterated by 1. Once the primeCount
  * variable reaches the specified number, the prime from that iteration is 
  * returned. */
-int calculatePrimes(void)
+int calculatePrimes( int max)
 {
     int i = 0;
     int prime;
     int primeCount = 0;
 
-    while (primeCount != 10001)
+    while (primeCount != max)
     {
         if (isPrime(i) == true)
         {
