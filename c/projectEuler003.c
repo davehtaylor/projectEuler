@@ -34,13 +34,7 @@ long lowest(long inputNum)
 /* Determine if the input number is prime */
 bool isPrime(long inputNum)
 {
-    if (inputNum == lowest(inputNum))
-    {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return inputNum == lowest(inputNum);
 }
 
 /* Perform the factorization */

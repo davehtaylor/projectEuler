@@ -30,13 +30,7 @@ int lowest(int inputNum)
 /* Determine if the input number is prime */
 bool isPrime(int inputNum)
 {
-    if (inputNum == lowest(inputNum))
-    {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return inputNum == lowest(inputNum);
 }
 
 /* Function to find a particular prime. The variable primeCount is the 
