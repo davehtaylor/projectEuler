@@ -3,43 +3,51 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-long lowest(long);
-bool isPrime(long);
-long sumOfPrimes(long);
+bool isPrime(unsigned long);
+unsigned long sumOfPrimes(long);
 
 int main(void)
 {
-/*    printf("%d\n", sumOfPrimes(10)); */
-    printf("%d\n", isPrime(2));
+    printf("%d\n", sumOfPrimes(2000000));
     return 0;
 }
 
-/* Find the lowest whole number the input number is divisible by */
-long lowest(long inputNum)
-{
-    int divisor = 2;
-
-    while (inputNum % divisor != 0)
-    {
-        divisor = divisor + 1;
-    }
-
-    return divisor;
-}
-
 /* Determine if the input number is prime  */
-bool isPrime(long inputNum)
+bool isPrime(unsigned long inputNum)
 {
-    return inputNum == lowest(inputNum);
+    if (inputNum == 2 || inputNum == 3 || inputNum == 5 || inputNum == 7)
+    {
+        return true;
+    }
+    else if (inputNum % 2 == 0)
+    {
+        return false;
+    }
+    else if (inputNum % 3 == 0)
+    {
+        return false;
+    }
+    else if (inputNum % 5 == 0)
+    {
+        return false;
+    }
+    else if (inputNum % 7 == 0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 /* Calculate sum of primes below a given number */
-long sumOfPrimes(long max)
+unsigned long sumOfPrimes(long max)
 {
-    int i;
-    int sum = 0;
+    unsigned long i;
+    unsigned long sum = 0;
 
-    for (i=1; i<=max; i++)
+    for (i = 2; i < max; i++)
     {
         if (isPrime(i))
         {
