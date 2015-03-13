@@ -15,7 +15,11 @@ int main(void)
 /* Determine if the input number is prime  */
 bool isPrime(unsigned long inputNum)
 {
-    if (inputNum == 2 || inputNum == 3 || inputNum == 5 || inputNum == 7)
+    if (inputNum == 1)
+    {
+        return false;
+    }
+    else if (inputNum == 2 || inputNum == 3 || inputNum == 5 || inputNum == 7)
     {
         return true;
     }
