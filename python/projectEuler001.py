@@ -9,15 +9,15 @@
 # Initialize a list, threeAndFive,  to hold the numbers that
 # are multiples of 3 and 5.
 
-threeAndFive = []
+threeAndFive = 0
 
 # Test if each number from 1 - 1000 is a multiple of 3 or 5, and 
 # if so, append the number to the threeAndFive list.
 
 for i in xrange(1,1000):
     if i%3 == 0  or i%5 == 0:
-        threeAndFive.append(i)
+        threeAndFive = threeAndFive + i
 
 # Print out the sum of all the numbers in the threeAndFive list
 
-print sum(threeAndFive)
+print threeAndFive
