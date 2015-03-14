@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int reverseNum(int);
+int reverse_num(int);
 int palindrome(void);
 
 int main(void)
@@ -13,15 +13,15 @@ int main(void)
 }
 
 /* A function to reverse a number */
-int reverseNum(int inputNum)
+int reverse_num(int input_num)
 {
     int reverse = 0;
 
-    while(inputNum)
+    while(input_num)
     {
         reverse *= 10;
-        reverse = reverse + inputNum % 10;
-        inputNum = inputNum / 10;
+        reverse = reverse + input_num % 10;
+        input_num = input_num / 10;
     }
 
     return reverse;
@@ -45,7 +45,7 @@ int palindrome(void)
              * larger than the last palindrome in the loop. Otherwise,
              * we would just find the last palindrome, but not necessarily
              * the biggest. */
-            if (product == reverseNum(product) && product > palindrome)
+            if (product == reverse_num(product) && product > palindrome)
             {
                 palindrome = product;
             }     

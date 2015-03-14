@@ -2,12 +2,12 @@
 
 #include <stdio.h>
 
-int evenFib(void);
+int even_fib(void);
 
 int main(void)
 {
 
-    int answer = evenFib();
+    int answer = even_fib();
 
     printf("%d\n",answer);
 
@@ -15,7 +15,7 @@ int main(void)
 
 }
 
-/* The evenFib function generates the Fibonacci sequence. Start with three 
+/* The even_fib function generates the Fibonacci sequence. Start with three 
  * variables, N1, N2, and N3. We initialize N1 and N2 to 1. The calculation 
  * will be N3 = N1 + N2. This will generate the next term in the sequence. 
  * After that, the variables will be reassigned: N2 becomes N1 and N3 becomes 
@@ -28,7 +28,7 @@ int main(void)
  * is even. If so, it is added to the sum variable. We keep doing this
  * until we reach 4,000,000, and then return the sum variable. */
 
-int evenFib(void)
+int even_fib(void)
 {
     int N1 = 1;
     int N2 = 1;

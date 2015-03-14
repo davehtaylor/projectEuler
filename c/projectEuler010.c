@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 bool isPrime(unsigned long);
 unsigned long sumOfPrimes(long);
@@ -40,7 +41,7 @@ bool isPrime(unsigned long inputNum)
         return false;
     }
     else
-    {
+    { 
         return true;
     }
 }

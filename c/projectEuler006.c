@@ -4,26 +4,26 @@
 #include <stdio.h>
 
 long square(long);
-long sumOfSquares(void);
-long squareOfSums(void);
+long sum_of_squares(void);
+long square_of_sums(void);
 
 long main(void)
 {
-    long answer = squareOfSums() - sumOfSquares();
+    long answer = square_of_sums() - sum_of_squares();
     printf("%d\n", answer); 
     return 0;
 }
 
 /* A function to square a number */
-long square(long inputNum)
+long square(long input_num)
 {
-    long square = inputNum * inputNum;
+    long square = input_num * input_num;
 
     return square;
 }
 
 /* Sum the squares */
-long sumOfSquares(void)
+long sum_of_squares(void)
 {
     int i;
     long sum = 0;
@@ -38,19 +38,19 @@ long sumOfSquares(void)
 }
 
 /* Square the sums */
-long squareOfSums(void)
+long square_of_sums(void)
 {
     int i;
     long sum = 0;
-    long squaredSum;
+    long squared_sum;
 
     for (i=1; i<=100; i++)
     {
         sum += i;
     }
 
-    squaredSum = square(sum);
+    squared_sum = square(sum);
 
-    return squaredSum;
+    return squared_sum;
 
 }

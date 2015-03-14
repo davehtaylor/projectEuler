@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 long lowest(long);
-bool isPrime(long);
+bool is_prime(long);
 long factor(long);
 
 int main(void)
@@ -19,11 +19,11 @@ int main(void)
 }
 
 /* Find the lowest whole number the input number is divisible by */
-long lowest(long inputNum)
+long lowest(long input_num)
 {
     int divisor = 2;
 
-    while (inputNum % divisor != 0)
+    while (input_num % divisor != 0)
     {
         divisor = divisor + 1;
     }
@@ -32,32 +32,32 @@ long lowest(long inputNum)
 }
 
 /* Determine if the input number is prime */
-bool isPrime(long inputNum)
+bool is_prime(long input_num)
 {
-    return inputNum == lowest(inputNum);
+    return input_num == lowest(input_num);
 }
 
 /* Perform the factorization */
-long factor(long inputNum)
+long factor(long input_num)
 {
-    long topLevel = inputNum;
+    long top_level = input_num;
     long branch1;
     long branch2;
 
     /* If the input number is prime, don't bother factoring.
      * Otherwise, continue with the factorization process. */ 
-    if (isPrime(inputNum) == true)
+    if (is_prime(input_num) == true)
     {
-        return inputNum;
+        return input_num;
     }
     else {
 
-        while (isPrime(branch2) == false)
+        while (is_prime(branch2) == false)
         {
-            branch1 = lowest(topLevel);
-            branch2 = topLevel / branch1;
+            branch1 = lowest(top_level);
+            branch2 = top_level / branch1;
 
-            topLevel = branch2;
+            top_level = branch2;
         }
 
         return branch2;
