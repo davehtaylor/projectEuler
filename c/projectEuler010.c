@@ -4,39 +4,39 @@
 #include <stdbool.h>
 #include <math.h>
 
-bool isPrime(unsigned long);
-unsigned long sumOfPrimes(long);
+bool is_prime(unsigned long);
+unsigned long sum_of_primes(long);
 
 int main(void)
 {
-    printf("%d\n", sumOfPrimes(2000000));
+    printf("%d\n", sum_of_primes(2000000));
     return 0;
 }
 
 /* Determine if the input number is prime  */
-bool isPrime(unsigned long inputNum)
+bool is_prime(unsigned long input_num)
 {
-    if (inputNum == 1)
+    if (input_num == 1)
     {
         return false;
     }
-    else if (inputNum == 2 || inputNum == 3 || inputNum == 5 || inputNum == 7)
+    else if (input_num == 2 || input_num == 3 || input_num == 5 || input_num == 7)
     {
         return true;
     }
-    else if (inputNum % 2 == 0)
+    else if (input_num % 2 == 0)
     {
         return false;
     }
-    else if (inputNum % 3 == 0)
+    else if (input_num % 3 == 0)
     {
         return false;
     }
-    else if (inputNum % 5 == 0)
+    else if (input_num % 5 == 0)
     {
         return false;
     }
-    else if (inputNum % 7 == 0)
+    else if (input_num % 7 == 0)
     {
         return false;
     }
@@ -47,14 +47,14 @@ bool isPrime(unsigned long inputNum)
 }
 
 /* Calculate sum of primes below a given number */
-unsigned long sumOfPrimes(long max)
+unsigned long sum_of_primes(long max)
 {
     unsigned long i;
     unsigned long sum = 0;
 
     for (i = 2; i < max; i++)
     {
-        if (isPrime(i))
+        if (is_prime(i))
         {
             sum += i;
         }
