@@ -2,7 +2,7 @@
 # first one hundred natural numbers and the square of the sum.
 
 def squareOfSums(start, end):
-
+    """Sums then squares the numbers given in the input range"""
     sum = 0 
     for i in xrange(start,end):
         sum += i
@@ -10,7 +10,7 @@ def squareOfSums(start, end):
     return sum**2
   
 def sumOfSquares(start, end):
-
+    """Squares then sums the numbers in the given input range"""
     sum = 0
     for i in xrange(start, end):
         sum += i**2
