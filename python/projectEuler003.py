@@ -1,14 +1,7 @@
-# Largest prime factor
-#
-# The prime factors of 13195 are 5, 7, 13 and 29.
-#
 # What is the largest prime factor of the number 600851475143 ?
 
-# Initialize a variable, startingNum, to hold the Number to factor
-# Initialize an array, primeFactors, to hold list of prime factors
-
 startingNum = 600851475143
-primeFactors = []
+
 
 def lowest(i):
     """Find the lowest whole number the input number is divisible by."""
@@ -17,6 +10,7 @@ def lowest(i):
         n = n+1
     return n
 
+
 def isPrime(i):
     """Determine if the input number is prime."""
     if i == lowest(i):
@@ -24,47 +18,26 @@ def isPrime(i):
     else:
         return False
 
-def branches(i):
-    """Begin the branching process in the Factor Tree."""
-    branch1 = lowest(i)
-    branch2 = i / branch1
-    return branch1, branch2
 
-def factorTree(startingNum):
-    """Loop through the Factor Tree. branch1 will always be prime, so it is
-    added to the primeFactors[] list. The tree then continues down branch2,
-    branching out from there and repeating the process.
-    """
-    # First we start branch1 and branch2 with the startingNum.
+def factor(startingNum):
+    """Perform the factorization"""
 
-    branch1, branch2 = branches(startingNum)
+    topLevel = startingNum
+    branch1 = 0
+    branch2 = 0
 
-    # While branch2 is not prime, we continue factoring, changing the
-    # output of branch1 and branch2 along the way to reflect the
-    # current position in the tree.
+    # If the input number is prime, no need to factor
+    if isPrime(startingNum) == True:
+        return startingNum
 
-    while isPrime(branch2) == False:
-        branch1, branch2 = branches(branch2)
-        primeFactors.append(branch1)
-        branches(branch2)
+    else:
+        while isPrime(branch2) == False:
+            branch1 = lowest(topLevel)
+            branch2 = topLevel / branch1
 
-        # Eventually, we'll reach the end and branch2 will be prime.
-        # This is the end of the Factor Tree, and this number is also
-        # added to the primeFactors[] list.
+            topLevel = branch2
 
-        if isPrime(branch2) == True:
-            primeFactors.append(branch2)
-            break
+        return branch2
 
-# Run the factorTree procedure.
 
-factorTree(startingNum)
-
-# Sort the primeFactors[] list to make sure they are in ascending order.
-
-primeFactors.sort()
-
-# Print out the last number in the primeFactors[] list, which should be
-# the largest prime factor of the startingNum.
-
-print primeFactors[-1] 
+print factor(startingNum)
