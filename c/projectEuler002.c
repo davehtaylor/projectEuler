@@ -2,14 +2,12 @@
 
 #include <stdio.h>
 
-int even_fib(void);
+int even_fib(int);
 
 int main(void)
 {
 
-    int answer = even_fib();
-
-    printf("%d\n",answer);
+    printf("%d\n", even_fib(4000000));
 
     return 0;
 
@@ -28,14 +26,14 @@ int main(void)
  * is even. If so, it is added to the sum variable. We keep doing this
  * until we reach 4,000,000, and then return the sum variable. */
 
-int even_fib(void)
+int even_fib(int input_num)
 {
     int N1 = 1;
     int N2 = 1;
     int N3;
     int sum = 0;
 
-    while (N3 < 4000000)
+    while (N3 < input_num)
     {
         N3 = N1 + N2;
 
