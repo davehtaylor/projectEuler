@@ -19,7 +19,7 @@
 
 //Function to add square roots.
 //
-//Arguments taken: a vector containing square roots
+//Arguments taken: a vector containing squares of natural numbers
 //
 //Returns: sum of the elements of the input vector
 int sum_of_squares(std::vector <int> squares) {
